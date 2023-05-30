@@ -44,3 +44,17 @@ function toggleNavbar(navbarId) {
     navbar.classList.add("show");
   }
 }
+document.addEventListener('DOMContentLoaded', function() {
+  var showButton = document.getElementById('showButton');
+  var additionalInfo = document.getElementById('additionalInfo');
+
+  showButton.addEventListener('click', function() {
+    if (additionalInfo.style.display === 'none') {
+      additionalInfo.style.display = 'block';
+      this.textContent = 'Nascondi altre informazioni';
+    } else {
+      additionalInfo.style.display = 'none';
+      this.textContent = 'Mostra altre informazioni';
+    }
+  });
+});
